@@ -9,7 +9,6 @@ const logos = [
   { name: "Sophos Clinic", src: "/logos/sophos.png" },
   { name: "Ayushma Yoga", src: "/logos/ayushma.png" },
   { name: "FIRMST.tech", src: "/logos/FIRMST.png" },
-  { name: "Language School", src: "/logos/language.png" },
   { name: "Aviakul", src: "/logos/aviakul.png" },
   { name: "CSO", src: "/logos/CSO.svg" },
   { name: "National Aviation Olympiad", src: "/logos/NAO.png" },
@@ -33,7 +32,7 @@ export default function ClientLogoLoop() {
           gradient={true}
           gradientColor={[5, 5, 9]} // matches dark top
           gradientWidth={80}
-          className="flex items-center"
+          className="flex items-center bg-dark py-6"
         >
           {logos.map((logo) => (
             <div

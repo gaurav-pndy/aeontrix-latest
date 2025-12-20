@@ -12,7 +12,7 @@
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-export default function ShimmerText({ text = "Text Shimmer", className }) {
+export default function ShimmerText({ children, className }) {
   return (
     <div className="flex items-center justify-center ">
       <motion.div
@@ -26,7 +26,7 @@ export default function ShimmerText({ text = "Text Shimmer", className }) {
             backgroundPosition: ["-200% center", "200% center"],
           }}
           className={cn(
-            "bg-[length:200%_100%] bg-gradient-to-r from-fg via-neutral-400 via-40% to-60% to-fg bg-clip-text font-bold h1-text text-transparent ",
+            "bg-[length:200%_100%] bg-gradient-to-r from-fg via-neutral-400 to-fg bg-clip-text font-bold h1-text text-transparent ",
             className
           )}
           transition={{
@@ -35,7 +35,7 @@ export default function ShimmerText({ text = "Text Shimmer", className }) {
             repeat: Number.POSITIVE_INFINITY,
           }}
         >
-          {text}
+          {children}
         </motion.h1>
       </motion.div>
     </div>

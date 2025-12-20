@@ -71,16 +71,13 @@ export default function Navbar() {
 
           {/* Center logo */}
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-black/40">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black/40">
               <img
                 src="/aeontrix-logo.png"
-                className="w-4 h-4 object-contain"
+                className="w-6 h-6 object-contain"
                 alt="Aeontrix Logo"
               />
             </div>
-            <span className="inline base-text font-medium tracking-tight">
-              Aeontrix
-            </span>
           </div>
 
           {/* Desktop: right side */}

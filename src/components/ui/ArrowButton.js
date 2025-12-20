@@ -17,12 +17,12 @@ export function ArrowButton({ children, onClick, customStyle = "" }) {
       {/* Outer box */}
       <div
         className="flex items-center gap-2 rounded-[6px] border
-                   border-[#1f1f1f] bg-white px-4 py-2
+                   border-dark bg-white px-4 py-2
                    transition-colors duration-300
-                   group-hover:bg-[#1f1f1f] group-hover:border-white"
+                   group-hover:bg-dark group-hover:border-white"
       >
         <span
-          className={`base-text font-medium text-[#171717]
+          className={`base-text font-medium text-dark
                      transition-colors duration-300
                      group-hover:text-white ${customStyle} `}
         >
@@ -32,8 +32,8 @@ export function ArrowButton({ children, onClick, customStyle = "" }) {
         {/* Inner box with arrow */}
         <span
           className="flex h-5 w-5 items-center justify-center rounded-[3px]
-                     bg-[#1f1f1f] transition-colors duration-300
-                     group-hover:bg-[#00ff93]"
+                     bg-dark transition-colors duration-300
+                     group-hover:bg-green"
         >
           <motion.span
             variants={{

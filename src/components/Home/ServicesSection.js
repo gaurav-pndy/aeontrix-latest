@@ -37,7 +37,7 @@ export default function ServicesSection({ initialRegion }) {
           {/* Heading + copy */}
           <div className="space-y-3">
             <ShimmerText
-              text="Transform your organization
+              children="Transform your organization
 with AI Employees"
             />
             <p className="large-text text-fg/70  max-w-lg">
