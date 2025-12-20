@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Aeontrix | AI Transformation Partner</title>
+    <meta
+      name="description"
+      content="Aeontrix AI helps businesses boost revenue and reduce workload by automating sales, marketing, and customer support with reliable AI systems."
+    />
+    <meta
+      name="keywords"
+      content="AI automation, business process automation, AI agents, chatbots, workflow automation, AI integration, n8n vs Zapier, AI transformation, lead generation, customer support automation"
+    />
+    <meta name="author" content="Aeontrix" />
+
+    <!-- Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://aeontrix.com/aeontrix-logo.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://aeontrix.com/aeontrix-logo.png"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aeontrix.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aeontrix.com/" />
+    <meta property="og:title" content="Aeontrix | AI Transformation Partner" />
+    <meta
+      property="og:description"
+      content="Aeontrix AI helps businesses automate sales, marketing, and customer support with reliable AI systems."
+    />
+    <meta property="og:image" content="https://aeontrix.com/aeontrix-emblem.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Aeontrix" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://aeontrix.com/" />
+    <meta name="twitter:title" content="Aeontrix | AI Transformation Partner" />
+    <meta
+      name="twitter:description"
+      content="Aeontrix AI helps businesses automate sales, marketing, and support with reliable AI systems."
+    />
+    <meta name="twitter:image" content="https://aeontrix.com/aeontrix-emblem.png" />
+    <meta name="twitter:creator" content="@aeontrix" />
+
+    <!-- SEO Directives -->
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563EB" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.onload=null;this.media='all';"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono&family=Manrope:wght@200..800&display=swap"
+      />
+    </noscript>
+
+    <!-- Google Analytics (Lazy Load) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      const loadAnalytics = () => {
+        if (window.__analyticsLoaded) return;
+        window.__analyticsLoaded = true;
+        const script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-5MP82FPX6L";
+        script.async = true;
+        script.onload = () => {
+          window.gtag = function () {
+            window.dataLayer.push(arguments);
+          };
+          gtag("js", new Date());
+          gtag("config", "G-5MP82FPX6L");
+        };
+        document.head.appendChild(script);
+      };
+      ["click", "scroll", "mousemove", "touchstart"].forEach((evt) =>
+        window.addEventListener(evt, loadAnalytics, { once: true, passive: true })
+      );
+      setTimeout(loadAnalytics, 5000);
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Aeontrix",
+        "url": "https://aeontrix.com",
+        "logo": "https://aeontrix.com/aeontrix-emblem.png",
+        "description": "Aeontrix AI helps businesses automate operations and grow with AI-powered sales, marketing, and support systems.",
+        "sameAs": [
+          "https://www.linkedin.com/company/aeontrix",
+          "https://x.com/AeontrixAI"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+918778931001",
+          "contactType": "customer service"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
