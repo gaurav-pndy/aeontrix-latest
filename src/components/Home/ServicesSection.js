@@ -19,7 +19,7 @@ export default function ServicesSection({ initialRegion }) {
       <div className="grid gap-10 xl:gap-16 md:grid-cols-2 md:items-start">
         {/* Left: sticky content */}
         <motion.div
-          className="md:sticky md:top-24 md:self-start space-y-8 z-20!"
+          className="md:sticky md:top-24 md:self-start space-y-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
