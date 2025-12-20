@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 
 export async function middleware(req) {
-  console.log("MIDDLEWARE RUNNING");
+  // console.log("MIDDLEWARE RUNNING");
 
   const forwardedFor = req.headers.get("x-forwarded-for") || "";
   const ip =
@@ -10,8 +10,6 @@ export async function middleware(req) {
     forwardedFor.split(",")[0].trim() ||
     req.headers.get("x-real-ip") ||
     "";
-
-  console.log("middleware ip =", ip);
 
   let region = "global";
 
@@ -22,14 +20,11 @@ export async function middleware(req) {
         { cache: "no-store" }
       );
 
-      console.log("middleware geo status", res.status);
       const text = await res.text();
-      console.log("middleware geo body", text);
 
       if (res.ok) {
         const data = JSON.parse(text);
         const country = data.country_code2 || "UNKNOWN";
-        console.log("middleware country", country);
         if (country === "IN") region = "india";
       }
     } catch (e) {
