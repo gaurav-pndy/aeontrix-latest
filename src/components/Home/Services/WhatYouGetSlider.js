@@ -60,7 +60,7 @@ const slides = [
 
 export default function WhatYouGetSlider() {
   return (
-    <section className="mt-6 rounded-xl bg-box-dark px-4 py-5 text-white md:px-6 md:py-6 max-w-[calc(100vw-2rem)] ">
+    <section className="mt-6 rounded-xl bg-dark-2 px-4 py-5 text-white md:px-6 md:py-6 max-w-[calc(100vw-2rem)] ">
       <div className="mb-4 flex items-center justify-between">
         <span className="micro-text font-medium tracking-[0.18em] text-green uppercase">
           What you get

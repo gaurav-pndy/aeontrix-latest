@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
           </div>
         </div> */}
         {/* GLOBAL BACKGROUND */}
-        {/* <div className="fixed inset-0 z-10 ">
+        <div className="fixed inset-0 z-10 ">
           <Ribbons
             baseThickness={30}
             colors={["#5227FF"]}
@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
             enableShaderEffect={false}
             backgroundColor={[0, 0, 0, 0]}
           />
-        </div> */}
+        </div>
 
         <Navbar />
         {children}

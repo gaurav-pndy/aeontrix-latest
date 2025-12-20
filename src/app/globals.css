@@ -90,10 +90,12 @@
 
 @theme inline {
     --color-bg: #f0f2f4;
-  --color-fg: #171717;
+  --color-fg: #222222;
 
-  --color-box-light: #ffffff;
-  --color-box-dark: #1f1f1f;
+  --color-light: #ffffff;
+  --color-light-2: #f0f2f4;
+  --color-dark: #222222;
+  --color-dark-2: #333333;
   --color-box-muted: #f0f2f4;
 
   --color-green: #0a8e6e;
@@ -147,58 +149,60 @@ body {
     "Segoe UI", sans-serif;
 }
 
-
 /* Semantic text utilities */
 @utility h1-text {
-  font-size: 3rem;       /* 36px */
+  font-size: clamp(2.25rem, 4vw, 3rem);   /* ~36px max */
   line-height: 1;
   font-weight: 700;
   letter-spacing: -0.03em;
 }
 
 @utility h2-text {
-  font-size: 1.875rem;      /* 30px */
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);  /* ~30px max */
   line-height: 1.15;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
 @utility h3-text {
-  font-size: 1.5rem;        /* 24px */
+  font-size: clamp(1.25rem, 2vw, 1.5rem);     /* ~24px max */
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: -0.015em;
 }
+
 @utility h4-text {
-  font-size: 1.25rem;        /* 24px */
+  font-size: clamp(1.125rem, 1.8vw, 1.25rem);
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: -0.015em;
 }
 
 @utility large-text {
-  font-size: 1.1rem;          /* 16px */
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
   line-height: 1.6;
   font-weight: 400;
 }
+
 @utility base-text {
-  font-size: 1rem;          /* 16px */
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
   line-height: 1.6;
   font-weight: 400;
 }
 
 @utility small-text {
-  font-size: 0.875rem;      /* 14px */
+  font-size: clamp(0.85rem, 1vw, 0.875rem);
   line-height: 1.5;
   font-weight: 400;
 }
 
 @utility micro-text {
-  font-size: 0.75rem;       /* 12px */
+  font-size: clamp(0.7rem, 0.9vw, 0.75rem);
   line-height: 1.4;
   font-weight: 400;
   letter-spacing: 0.03em;
 }
+
 
 .dark {
 

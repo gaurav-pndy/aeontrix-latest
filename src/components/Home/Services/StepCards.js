@@ -439,7 +439,7 @@ export default function StepCards({ initialRegion = "global" }) {
                   )}
 
                   {selectedStep.id === 3 && selectedStep.details.loopBox && (
-                    <section className="mt-6 rounded-[18px] bg-box-dark  p-6 text-white">
+                    <section className="mt-6 rounded-[18px] bg-dark-2  p-6 text-white">
                       <p className="large-text font-semibold mb-6">
                         {selectedStep.details.loopBox.title}
                       </p>

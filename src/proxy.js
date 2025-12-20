@@ -1,7 +1,7 @@
 // middleware.js (project root, same level as next.config.mjs)
 import { NextResponse } from "next/server";
 
-export async function middleware(req) {
+export async function proxy(req) {
   // console.log("MIDDLEWARE RUNNING");
 
   const forwardedFor = req.headers.get("x-forwarded-for") || "";
