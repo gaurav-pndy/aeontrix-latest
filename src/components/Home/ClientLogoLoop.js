@@ -11,7 +11,7 @@ const logos = [
   { name: "FIRMST.tech", src: "/logos/FIRMST.png" },
   { name: "Language School", src: "/logos/language.png" },
   { name: "Aviakul", src: "/logos/aviakul.png" },
-  { name: "CSO", src: "/logos/cso.svg" },
+  { name: "CSO", src: "/logos/CSO.svg" },
   { name: "National Aviation Olympiad", src: "/logos/NAO.png" },
   { name: "Pasovit", src: "/logos/pasovit.png" },
 ];

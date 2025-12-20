@@ -15,7 +15,7 @@ const containerVariants = {
 
 export default function ServicesSection({ initialRegion }) {
   return (
-    <section className="relative mx-auto max-w-348 px-4 pb-24 pt-16">
+    <section className="relative mx-auto max-w-348 px-4 pb-24 pt-16 overflow-hidden">
       <div className="grid gap-10 xl:gap-16 md:grid-cols-2 md:items-start">
         {/* Left: sticky content */}
         <motion.div
