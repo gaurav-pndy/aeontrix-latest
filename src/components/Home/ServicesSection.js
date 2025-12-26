@@ -15,7 +15,7 @@ const containerVariants = {
 
 export default function ServicesSection({ initialRegion }) {
   return (
-    <section className="relative mx-auto max-w-348 px-4 pb-24 pt-16 ">
+    <section className="relative mx-auto max-w-348 px-4 pt-20 pb-12 ">
       <div className="grid gap-10 xl:gap-16 md:grid-cols-2 md:items-start">
         {/* Left: sticky content */}
         <motion.div
@@ -36,10 +36,10 @@ export default function ServicesSection({ initialRegion }) {
 
           {/* Heading + copy */}
           <div className="space-y-3">
-            <ShimmerText
-              children="Transform your organization
-with AI Employees"
-            />
+            <ShimmerText>
+              Transform your organization with{" "}
+              <span className="text-green"> AI Employees</span>
+            </ShimmerText>
             <p className="large-text text-fg/70  max-w-lg">
               A simple 3‑step engagement that takes you from chaos → clarity →
               execution → ongoing performance.

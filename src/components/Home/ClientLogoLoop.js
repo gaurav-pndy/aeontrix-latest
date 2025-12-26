@@ -19,7 +19,7 @@ export default function ClientLogoLoop() {
   return (
     <section
       className="relative 
-         -mt-20       "
+               "
     >
       <div className=" max-w-screen py-6 relative z-10">
         <p className="h4-text font-semibold mb-6 text-center ">
@@ -32,7 +32,7 @@ export default function ClientLogoLoop() {
           gradient={true}
           gradientColor={[5, 5, 9]} // matches dark top
           gradientWidth={80}
-          className="flex items-center bg-dark py-6"
+          className="flex items-center bg-white py-6"
         >
           {logos.map((logo) => (
             <div

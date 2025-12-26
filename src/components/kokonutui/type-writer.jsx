@@ -154,7 +154,7 @@ export default function TypewriterTitle({
       <div className="relative z-10 flex flex-col items-center justify-center text-center">
         <motion.div
           animate={{ opacity: 1 }}
-          className="flex items-center gap-1  text-white tracking-normal leading-14  dark:text-white"
+          className="flex items-center gap-1  text-green tracking-normal leading-14  "
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
@@ -165,7 +165,7 @@ export default function TypewriterTitle({
             animate={{
               opacity: [1, 1, 0, 0],
             }}
-            className="inline-block h-[1em] w-[2px] bg-white dark:bg-white"
+            className="inline-block h-[1em] w-[2px] bg-green dark:bg-green"
             transition={{
               duration: 1,
               repeat: Number.POSITIVE_INFINITY,

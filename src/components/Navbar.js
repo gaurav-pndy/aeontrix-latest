@@ -50,10 +50,8 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-4 z-40 flex justify-center px-4">
       <div className="w-full max-w-3xl transition-all duration-300">
         <div
-          className={`flex items-center justify-between rounded-full border px-6 py-2 backdrop-blur-xl shadow-[0_12px_40px_rgba(15,23,42,0.35)] ${
-            pastHero
-              ? "border-black/10 bg-white text-neutral-900"
-              : "border-white/20 bg-white/10 text-white/90"
+          className={`flex items-center justify-between rounded-full border px-6 py-2 backdrop-blur-xl shadow-[0_12px_40px_rgba(15,23,42,0.35)] border-black/10 bg-white/20 text-neutral-900
+              
           }`}
         >
           {/* Desktop: left links */}
@@ -62,7 +60,7 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className={`${linkBase} ${linkColor}`}
+                className={`text-neutral-900 hover:text-black base-text relative font-medium transition-colors`}
               >
                 {item.label}
               </a>
@@ -82,7 +80,10 @@ export default function Navbar() {
 
           {/* Desktop: right side */}
           <div className="hidden md:flex items-center gap-4">
-            <a href={rightLink.href} className={`${linkBase} ${linkColor}`}>
+            <a
+              href={rightLink.href}
+              className={`text-neutral-900 hover:text-black base-text relative font-medium transition-colors`}
+            >
               {rightLink.label}
             </a>
             <ArrowButton
@@ -95,8 +96,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className={`md:hidden inline-flex h-8 w-8 items-center justify-center rounded-full ${
-              pastHero ? "bg-black text-white" : "bg-black/40 text-white"
+            className={`md:hidden inline-flex h-8 w-8 items-center justify-center rounded-full bg-black text-white
             }`}
             onClick={() => setOpen((v) => !v)}
           >

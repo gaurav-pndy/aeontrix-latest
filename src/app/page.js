@@ -1,5 +1,6 @@
 import ClientLogoLoop from "@/components/Home/ClientLogoLoop";
 import Hero from "@/components/Home/Hero";
+import HowAIEmployeesWork from "@/components/Home/HowAIEmployeesWork";
 import ServicesSection from "@/components/Home/ServicesSection";
 import Ribbons from "@/components/ui/Ribbons";
 import { getRequestRegion } from "@/lib/region";
@@ -15,6 +16,7 @@ export default async function Home() {
       <Hero />
       <ClientLogoLoop />
       <ServicesSection initialRegion={region} />
+      <HowAIEmployeesWork />
     </main>
   );
 }
