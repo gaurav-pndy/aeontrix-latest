@@ -170,7 +170,7 @@ export default function BeforeAfterAeontrix() {
                   src="/after.png" // placeholder path
                   alt="Confused business owner"
                   fill
-                  className="object-contain relative h-fit"
+                  className="object-contain relative! h-fit"
                 />
               </div>
               {afterPoints.slice(4, 8).map((point, i) => (
