@@ -304,9 +304,25 @@ body {
 
 
 .swiper-pagination-bullet{
-  background: #12f1b97a !important;
+  background: #0c1b17a7 !important;
 }
 .swiper-pagination-bullet-active{
   background: #0a8e6e !important;
 }
 
+.border-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--x, -200px) var(--y, -200px),
+    #0a8e6e,
+    transparent 60%
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 2px;
+  z-index: 2;
+}

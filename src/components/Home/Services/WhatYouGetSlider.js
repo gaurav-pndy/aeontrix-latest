@@ -60,17 +60,17 @@ const slides = [
 
 export default function WhatYouGetSlider() {
   return (
-    <section className="mt-6 rounded-xl bg-dark-2 px-4 py-5 text-white md:px-6 md:py-6 max-w-[calc(100vw-2rem)] ">
-      <div className="mb-4 flex items-center justify-between">
-        <span className="micro-text font-medium tracking-[0.18em] text-green uppercase">
+    <section className="mt-6 rounded-xl bg-light px-4 py-5 text-white md:px-6 md:py-6 max-w-[calc(100vw-2rem)] ">
+      <div className="mb-4 relative flex items-center justify-between">
+        <span className="micro-text text-center w-full font-medium tracking-[0.18em] text-green uppercase">
           What you get
         </span>
 
-        <div className="flex gap-2">
-          <button className="whatyouget-prev text-fg flex h-7 w-7 items-center justify-center rounded-full bg-white hover:bg-white/80 transition-all duration-300 cursor-pointer">
+        <div className="flex gap-2 absolute top-0 right-0">
+          <button className="whatyouget-prev text-fg flex h-7 w-7 items-center justify-center rounded-full bg-light-2 hover:bg-white/80 transition-all duration-300 cursor-pointer">
             <FiChevronLeft />
           </button>
-          <button className="whatyouget-next text-fg flex h-7 w-7 items-center justify-center rounded-full bg-white hover:bg-white/80 transition-all duration-300 cursor-pointer">
+          <button className="whatyouget-next text-fg flex h-7 w-7 items-center justify-center rounded-full bg-light-2 hover:bg-white/80 transition-all duration-300 cursor-pointer">
             <FiChevronRight />
           </button>
         </div>
@@ -89,13 +89,15 @@ export default function WhatYouGetSlider() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} className="w-full!">
-            <div className="w-full max-w-full rounded-lg border border-[--color-accent-spring] bg-white text-[#111827] px-3 py-4 sm:px-4 flex items-center gap-3">
+            <div className="w-full max-w-full rounded-lg border border-[--color-accent-spring] bg-dark-2 text-[#111827] px-3 py-4 sm:px-4 flex items-center gap-3">
               <div className="flex h-11 w-11 min-w-11 items-center justify-center rounded-sm bg-green text-white text-xl">
                 {slide.icon}
               </div>
               <div>
-                <h3 className="base-text font-semibold mb-1">{slide.title}</h3>
-                <p className="small-text text-[#4b5563]">{slide.text}</p>
+                <h3 className="base-text text-light font-semibold mb-1">
+                  {slide.title}
+                </h3>
+                <p className="small-text text-light-2">{slide.text}</p>
               </div>
             </div>
           </SwiperSlide>

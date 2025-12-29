@@ -1,3 +1,4 @@
+import BeforeAfterAeontrix from "@/components/Home/BeforeAfterAeontrix";
 import ClientLogoLoop from "@/components/Home/ClientLogoLoop";
 import Hero from "@/components/Home/Hero";
 import HowAIEmployeesWork from "@/components/Home/HowAIEmployeesWork";
@@ -17,6 +18,7 @@ export default async function Home() {
       <ClientLogoLoop />
       <ServicesSection initialRegion={region} />
       <HowAIEmployeesWork />
+      <BeforeAfterAeontrix />
     </main>
   );
 }

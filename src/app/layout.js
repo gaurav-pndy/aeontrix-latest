@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter_Tight } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Ribbons from "@/components/ui/Ribbons";
+import ClientEffects from "@/components/ClientEffects";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -98,6 +99,7 @@ export default function RootLayout({ children }) {
         </div> */}
 
         <Navbar />
+        <ClientEffects />
         {children}
       </body>
     </html>

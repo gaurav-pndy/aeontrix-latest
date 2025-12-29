@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ShimmerText from "../kokonutui/shimmer-text";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowDown, FaArrowLeft, FaArrowRight, FaPlus } from "react-icons/fa";
 
 const systems = [
   "Customer Relationship Management",
@@ -28,7 +28,7 @@ export default function HowAIEmployeesWork() {
       <ShimmerText>How our AI Employees work</ShimmerText>
 
       <div className="relative mt-10 hidden lg:block">
-        <div className="relative mx-auto rounded-3xl bg-dark px-8 py-8 shadow-[0_24px_80px_rgba(15,23,42,0.45)]">
+        <div className="relative mx-auto rounded-3xl bg-light px-8 py-8 shadow-[0_24px_80px_rgba(15,23,42,0.45)]">
           {/* gradient connector line */}
 
           <div className="relative grid grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)_minmax(0,1.1fr)] gap-8  items-center">
@@ -41,9 +41,11 @@ export default function HowAIEmployeesWork() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="space-y-4 bg-dark-2 p-4 rounded-xl max-w-64 xl:max-w-86 2xl:max-w-sm z-20  relative"
+              className=" bg-dark-2  border-glow-wrapper p-4 rounded-xl max-w-64 xl:max-w-86 2xl:max-w-sm z-20  relative"
             >
-              <h3 className="large-text font-semibold text-light-2 text-center">
+              <div className="border-glow"></div>
+
+              <h3 className="large-text font-semibold text-light-2 mb-4 text-center">
                 Systems
               </h3>
               <div className="space-y-2 xl:space-y-3">
@@ -71,9 +73,10 @@ export default function HowAIEmployeesWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className=" relative space-y-4 bg-dark-2 p-4 rounded-xl max-w-64 xl:max-w-86 2xl:max-w-sm  z-20"
+              className=" relative  border-glow-wrapper bg-light-2 p-4 rounded-xl max-w-64 xl:max-w-86 2xl:max-w-sm  z-20"
             >
-              <h3 className="large-text font-semibold text-light-2 text-center">
+              <div className="border-glow"></div>
+              <h3 className="large-text font-semibold text-green mb-4 text-center">
                 AI Assistants
               </h3>
               <div className=" space-y-2 xl:space-y-3">
@@ -84,7 +87,7 @@ export default function HowAIEmployeesWork() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.05 * i, duration: 0.35 }}
-                    className="rounded-md bg-dark/80 border border-white/10 px-4 py-2.5 small-text xl:base-text text-light shadow-[0_12px_30px_rgba(15,23,42,0.35)]"
+                    className="rounded-md bg-light border border-white/10 px-4 py-2.5 small-text xl:base-text text-dark-2 shadow-[0_12px_30px_rgba(15,23,42,0.15)]"
                   >
                     {item}
                   </motion.div>
@@ -103,7 +106,7 @@ export default function HowAIEmployeesWork() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="flex items-center justify-center"
+              className="flex   items-center justify-center"
             >
               <motion.div
                 animate={{ y: [0, -8, 0] }}
@@ -112,9 +115,11 @@ export default function HowAIEmployeesWork() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative w-full max-w-64 xl:max-w-xs aspect-square rounded-2xl bg-dark border border-green/40
+                className="relative border-glow-wrapper w-full max-w-64 xl:max-w-xs  aspect-square rounded-2xl bg-dark border border-green/40
                shadow-[0_0_60px_rgba(16,185,129,0.55)]"
               >
+                {" "}
+                <div className="border-glow"></div>
                 <Image
                   src="/ai-brain.png"
                   alt="AI Brain"
@@ -128,7 +133,7 @@ export default function HowAIEmployeesWork() {
       </div>
 
       {/* MOBILE: Assistants -> arrow -> Brain -> plus -> Systems */}
-      <div className="lg:hidden mt-6 space-y-6 relative mx-auto rounded-3xl bg-dark px-8 py-8 shadow-[0_24px_80px_rgba(15,23,42,0.45)]">
+      <div className="lg:hidden mt-6 space-y-6 relative mx-auto rounded-3xl bg-dark p-6 shadow-[0_24px_80px_rgba(15,23,42,0.45)]">
         {/* Assistants */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -160,8 +165,8 @@ export default function HowAIEmployeesWork() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-full border border-emerald-400/60 bg-surface/80 text-emerald-300">
-            ↓
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-emerald-400/60 bg-surface/80 text-emerald-300">
+            <FaArrowDown className="text-2xl" />
           </div>
         </motion.div>
 
@@ -170,13 +175,13 @@ export default function HowAIEmployeesWork() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="space-y-6"
+          className="space-y-4 bg-dark-2 p-4 overflow-hidden py-6 rounded-xl"
         >
           <div className="flex items-center justify-center">
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="relative h-60 w-60 rounded-2xl bg-emerald-500/5 border border-emerald-400/40 shadow-[0_0_40px_rgba(16,185,129,0.55)]"
+              className="relative h-60 w-60 rounded-2xl bg-dark border border-emerald-400/40 shadow-[0_0_40px_rgba(16,185,129,0.55)]"
             >
               <Image
                 src="/ai-brain.png"
@@ -189,13 +194,13 @@ export default function HowAIEmployeesWork() {
 
           {/* plus */}
           <div className="flex justify-center">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full border border-emerald-400/60 bg-surface/80 text-emerald-300">
-              +
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-emerald-400/60 bg-surface/80 text-emerald-300">
+              <FaPlus className="text-2xl" />
             </div>
           </div>
 
           {/* Systems */}
-          <div className="space-y-3 bg-dark-2 p-4 rounded-xl">
+          <div className="space-y-3 ">
             <h3 className="small-text font-semibold text-light-2 text-center">
               Systems
             </h3>
