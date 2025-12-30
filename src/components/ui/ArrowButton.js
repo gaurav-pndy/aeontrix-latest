@@ -12,35 +12,33 @@ export function ArrowButton({ children, onClick, customStyle = "" }) {
       initial="rest"
       animate="rest"
       onClick={onClick}
-      className={`group inline-flex cursor-pointer items-center ${customStyle}`}
+      className={`group/btn inline-flex cursor-pointer items-center  w-full`}
     >
-      {/* Outer box */}
       <div
-        className="flex items-center gap-2 rounded-[6px] border
-                   border-dark bg-white px-4 py-2
-                   transition-colors duration-300
-                   group-hover:bg-dark group-hover:border-white"
+        className={`flex items-center justify-between  gap-2 rounded-[6px]  border
+               border-dark bg-white px-4 py-2
+               transition-colors duration-300
+               group-hover/btn:bg-dark group-hover/btn:border-white ${customStyle}`}
       >
         <span
-          className={`base-text font-medium text-dark
-                     transition-colors duration-300
-                     group-hover:text-white ${customStyle} `}
+          className="base-text font-medium text-dark
+                 transition-colors duration-300
+                 group-hover/btn:text-white"
         >
           {children}
         </span>
 
-        {/* Inner box with arrow */}
         <span
           className="flex h-5 w-5 items-center justify-center rounded-[3px]
-                     bg-dark transition-colors duration-300
-                     group-hover:bg-green"
+                 bg-dark transition-colors duration-300
+                 group-hover/btn:bg-green"
         >
           <motion.span
             variants={{
               rest: { color: "#ffffff", x: 0 },
               hover: { color: "#1f1f1f", x: 2 },
             }}
-            className="text-xs text-white "
+            className="text-xs"
           >
             <FiArrowUpRight />
           </motion.span>

@@ -290,7 +290,7 @@ body {
 
 
 /* Promote all interactive content above WebGL */
-:where(
+/* :where(
   h1, h2, h3, h4, h5, h6,
   p, span, li,
   a, button,
@@ -300,11 +300,11 @@ body {
 ) {
   position: relative;
   z-index: 20;
-}
+} */
 
 
 .swiper-pagination-bullet{
-  background: #0c1b17a7 !important;
+  background: #0a8e6db0  !important;
 }
 .swiper-pagination-bullet-active{
   background: #0a8e6e !important;
