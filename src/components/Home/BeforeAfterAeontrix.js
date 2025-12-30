@@ -83,16 +83,16 @@ export default function BeforeAfterAeontrix() {
   return (
     <section className="relative mx-auto px-4 py-12">
       {/* Beams background */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <BeamsBackground />
-      </div>
+      </div> */}
 
       <div className="max-w-5xl  mx-auto">
         {/* BEFORE */}
         <div className="space-y-4">
           <ShimmerText>Before Aeontrix</ShimmerText>
 
-          <div className="relative rounded-3xl mt-10 border border-[#b3282d] bg-black/20 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.65)]">
+          <div className="relative rounded-3xl mt-10 border border-[#b3282d] shadow-[0_10px_40px_rgba(0,0,0,0.35)] p-6 ">
             {/* pain bubbles */}
             <div className="grid md:grid-cols-4 gap-4 md:gap-8 ">
               {beforePoints.slice(0, 4).map((point, i) => (
@@ -105,7 +105,7 @@ export default function BeforeAfterAeontrix() {
                   className={`${point.custom}  md:min-h-32  h-full`}
                 >
                   <TiltedCard>
-                    <div className="h-full flex items-center rounded-xl border border-[#b3282d] bg-white/5 backdrop-blur-md p-4 lg:p-6 text-center base-text text-light-2">
+                    <div className="h-full flex items-center rounded-xl border border-[#b3282d] bg-black/5 backdrop-blur-md p-4 lg:p-6 text-center base-text text-[#b3282d]">
                       {point.text}
                     </div>
                   </TiltedCard>
@@ -129,16 +129,13 @@ export default function BeforeAfterAeontrix() {
                   className={`${point.custom}  md:min-h-32  h-full`}
                 >
                   <TiltedCard>
-                    <div className="h-full flex items-center rounded-xl border border-[#b3282d] bg-white/5 backdrop-blur-md p-4 lg:p-6 text-center base-text text-light-2">
+                    <div className="h-full flex items-center rounded-xl border border-[#b3282d] bg-black/5 backdrop-blur-md p-4 lg:p-6 text-center base-text text-[#b3282d]">
                       {point.text}
                     </div>
                   </TiltedCard>
                 </motion.div>
               ))}
             </div>
-
-            {/* confused businessman placeholder */}
-            <div className="pointer-events-none absolute inset-y-6 left-1/2 flex -translate-x-1/2 items-center justify-center"></div>
           </div>
         </div>
 
@@ -146,7 +143,7 @@ export default function BeforeAfterAeontrix() {
         <div className="space-y-4 mt-12">
           <ShimmerText>After Aeontrix</ShimmerText>
 
-          <div className="relative rounded-3xl mt-10 border border-green bg-black/20 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.65)]">
+          <div className="relative rounded-3xl mt-10 border border-green bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
             {/* pain bubbles */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 ">
               {afterPoints.slice(0, 4).map((point, i) => (
@@ -156,16 +153,16 @@ export default function BeforeAfterAeontrix() {
                   whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.03 * i, duration: 0.35 }}
-                  className={`${point.custom}  md:min-h-32  h-full`}
+                  className={`${point.custom}  md:min-h-32 z-10 h-full`}
                 >
                   <TiltedCard>
-                    <div className="h-full flex items-center rounded-xl border border-green bg-white/5 backdrop-blur-md p-4 lg:p-6 text-center base-text text-light-2">
+                    <div className="h-full flex items-center rounded-xl border border-green bg-light-2 backdrop-blur-md p-4 lg:p-6 text-center base-text text-green ">
                       {point.text}
                     </div>
                   </TiltedCard>
                 </motion.div>
               ))}
-              <div className="md:absolute flex h-60 md:h-96 w-full  -z-10 md:top-1/2 md:left-1/2 md:-translate-1/2 ">
+              <div className="md:absolute flex h-60 md:h-96 w-full  z-0 md:top-1/2 md:left-1/2 md:-translate-1/2 ">
                 <Image
                   src="/after.png" // placeholder path
                   alt="Confused business owner"
@@ -183,16 +180,13 @@ export default function BeforeAfterAeontrix() {
                   className={`${point.custom}  md:min-h-32  h-full`}
                 >
                   <TiltedCard>
-                    <div className="h-full flex items-center rounded-xl border border-green bg-white/5 backdrop-blur-md p-4 lg:p-6 text-center base-text text-light-2">
+                    <div className="h-full flex items-center rounded-xl border border-green bg-light-2 backdrop-blur-md p-4 lg:p-6 text-center base-text text-green">
                       {point.text}
                     </div>
                   </TiltedCard>
                 </motion.div>
               ))}
             </div>
-
-            {/* confused businessman placeholder */}
-            <div className="pointer-events-none absolute inset-y-6 left-1/2 flex -translate-x-1/2 items-center justify-center"></div>
           </div>
         </div>
       </div>
