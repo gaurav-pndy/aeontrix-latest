@@ -225,7 +225,7 @@ function AccordionSection({ section }) {
             <ul className="mt-1 space-y-1 base-text text-fg/70">
               {section.items.map((item, idx) => (
                 <li key={idx} className="flex">
-                  <span className="mr-2 text-green ">-</span>
+                  <span className="mr-2 text-green ">{idx + 1}.</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -264,8 +264,9 @@ export default function StepCards({ initialRegion = "global" }) {
         >
           <button
             onClick={() => setSelectedStep(step)}
-            className="w-full text-left rounded-xl bg-white px-6 py-6 shadow-sm  hover:shadow-xl hover:scale-101 transition-all! duration-300! cursor-pointer"
+            className="w-full text-left rounded-xl bg-white px-6 py-6 shadow-sm  hover:shadow-xl hover:scale-101 transition-all! duration-300! cursor-pointer border-glow-wrapper"
           >
+            <div className="border-glow"></div>
             <div className="mb-3 flex items-center gap-3">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green text-white small-text font-semibold">
                 {step.id}
@@ -403,10 +404,10 @@ export default function StepCards({ initialRegion = "global" }) {
                         {selectedStep.details.creditBox.rows.map((row, idx) => (
                           <div key={idx} className="flex items-start gap-2">
                             <div
-                              className={`shrink-0 h-6 w-6 rounded-full flex items-center justify-center  ${
-                                row.type === "full"
-                                  ? "bg-green text-white"
-                                  : "bg-[#e5e7eb] text-[#6b7280]"
+                              className={`shrink-0 h-6 w-6 text-sm rounded-full flex text-white items-center justify-center mt-0.5 ${
+                                row.type === "full" || row.type === "half"
+                                  ? "bg-green "
+                                  : "bg-red-500 "
                               }`}
                             >
                               {row.type === "none" ? (

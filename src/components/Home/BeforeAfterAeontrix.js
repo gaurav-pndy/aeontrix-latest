@@ -90,7 +90,7 @@ export default function BeforeAfterAeontrix() {
       <div className="max-w-5xl  mx-auto">
         {/* BEFORE */}
         <div className="space-y-4">
-          <ShimmerText>Before Aeontrix</ShimmerText>
+          <h1 className="h1-text text-center">Before Aeontrix</h1>
 
           <div className="relative rounded-3xl mt-10 border border-[#b3282d] shadow-[0_10px_40px_rgba(0,0,0,0.35)] p-6 ">
             {/* pain bubbles */}
@@ -141,7 +141,7 @@ export default function BeforeAfterAeontrix() {
 
         {/* AFTER */}
         <div className="space-y-4 mt-12">
-          <ShimmerText>After Aeontrix</ShimmerText>
+          <h1 className="h1-text text-center">After Aeontrix</h1>
 
           <div className="relative rounded-3xl mt-10 border border-green bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
             {/* pain bubbles */}

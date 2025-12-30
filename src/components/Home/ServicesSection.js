@@ -36,13 +36,13 @@ export default function ServicesSection({ initialRegion }) {
 
           {/* Heading + copy */}
           <div className="space-y-3">
-            <ShimmerText>
+            <h1 className="h1-text">
               Transform your organization with{" "}
               <span className="text-green"> AI Employees</span>
-            </ShimmerText>
+            </h1>
             <p className="large-text text-fg/70  max-w-lg">
-              A simple 3‑step engagement that takes you from chaos → clarity →
-              execution → ongoing performance.
+              A simple 3‑step engagement that takes you from <br /> chaos →
+              clarity → execution → ongoing performance.
             </p>
           </div>
 
