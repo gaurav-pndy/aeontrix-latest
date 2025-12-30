@@ -135,7 +135,10 @@ export default function ClientStories() {
                   {/* Footer */}
                   <footer className=" mt-4 md:mt-10 flex flex-col-reverse md:flex-row  items-end justify-between gap-6 md:gap-4">
                     {" "}
-                    <ArrowButton customStyle="w-full md:w-fit">
+                    <ArrowButton
+                      btnStyle="w-full"
+                      customStyle="w-full md:w-fit"
+                    >
                       Read Case Study
                     </ArrowButton>
                     <div className=" flex flex-col items-end  text-right">

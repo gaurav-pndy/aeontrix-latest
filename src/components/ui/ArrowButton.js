@@ -5,14 +5,19 @@ import { motion } from "framer-motion";
 
 import { FiArrowUpRight } from "react-icons/fi";
 
-export function ArrowButton({ children, onClick, customStyle = "" }) {
+export function ArrowButton({
+  children,
+  onClick,
+  btnStyle = "",
+  customStyle = "",
+}) {
   return (
     <motion.button
       whileHover="hover"
       initial="rest"
       animate="rest"
       onClick={onClick}
-      className={`group/btn inline-flex cursor-pointer items-center  w-full`}
+      className={`group/btn inline-flex cursor-pointer items-center ${btnStyle} `}
     >
       <div
         className={`flex items-center justify-between  gap-2 rounded-[6px]  border
