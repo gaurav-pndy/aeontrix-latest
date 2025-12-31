@@ -214,13 +214,13 @@ export default function BeforeAfterAeontrix() {
                 <div className="md:absolute translate-y-5 min-[400px]:translate-y-7 flex h-24 min-[400px]:h-32  md:h-96 w-full  justify-center z-0 md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
                   <motion.div
                     style={{ opacity: beforeImageOpacity }}
-                    className="md:absolute inset-0"
+                    className="absolute inset-0 "
                   >
                     <Image
                       src="/before.png"
                       alt="Before Aeontrix"
                       fill
-                      className="relative! scale-150 md:scale-100 md:absolute object-contain"
+                      className="relative! scale-150 -translate-y-3 md:scale-100 md:absolute object-contain"
                     />
                   </motion.div>
                   <motion.div
