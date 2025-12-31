@@ -197,7 +197,7 @@ export default function BeforeAfterAeontrix() {
                 borderColor,
                 backgroundColor,
               }}
-              className="relative h-[85vh] md:h-auto rounded-3xl mt-4 md:mt-10 border-2 shadow-[0_10px_40px_rgba(0,0,0,0.35)] p-4 md:p-6"
+              className="relative h-[85vh] md:h-auto rounded-3xl mt-8 md:mt-10 border-2 shadow-[0_10px_40px_rgba(0,0,0,0.35)] p-4 md:p-6"
             >
               {/* Cards grid */}
               <div className="grid grid-cols-1 h-full md:grid-cols-4 gap-2 md:gap-8 lg:gap-4 xl:gap-8">

@@ -67,7 +67,7 @@ export default function ClientStories() {
         </motion.div>
 
         {/* Carousel */}
-        <div className="mt-10  relative">
+        <div className="mt-8 md:mt-10  relative">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             centeredSlides

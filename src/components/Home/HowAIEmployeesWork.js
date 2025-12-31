@@ -42,7 +42,7 @@ export default function HowAIEmployeesWork() {
     <section className="relative mx-auto max-w-348 px-4 py-8">
       <h1 className="h1-text text-center">How our AI Employees work</h1>
 
-      <div className="relative mt-10 hidden lg:block">
+      <div className="relative mt-8 md:mt-10 hidden lg:block">
         <div className="relative mx-auto rounded-3xl bg-light px-8 py-8 shadow-[0_24px_80px_rgba(15,23,42,0.45)]">
           {/* gradient connector line */}
 
