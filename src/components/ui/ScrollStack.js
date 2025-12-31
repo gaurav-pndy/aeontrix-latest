@@ -28,6 +28,7 @@ const ScrollStack = ({
   const cardsRef = useRef([]);
   const lastTransformsRef = useRef(new Map());
   const isUpdatingRef = useRef(false);
+  const pinnedPositionsRef = useRef(new Map());
 
   const calculateProgress = useCallback((scrollTop, start, end) => {
     if (scrollTop < start) return 0;
@@ -134,10 +135,15 @@ const ScrollStack = ({
       let translateY = 0;
       const isPinned = scrollTop >= pinStart && scrollTop <= pinEnd;
 
-      if (isPinned) {
+      if (scrollTop < pinStart) {
+        // Card hasn't reached pin position yet - no translation
+        translateY = 0;
+      } else if (isPinned) {
+        // Card is pinned - follow scroll
         translateY =
           scrollTop - cardTop + stackPositionPx + itemStackDistance * i;
       } else if (scrollTop > pinEnd) {
+        // Card is past pin end - stay at final position
         translateY = pinEnd - cardTop + stackPositionPx + itemStackDistance * i;
       }
 
@@ -247,9 +253,9 @@ const ScrollStack = ({
     const transformsCache = lastTransformsRef.current;
 
     cards.forEach((card, i) => {
-      if (i < cards.length - 1) {
-        card.style.marginBottom = `${itemDistance}px`;
-      }
+      // if (i < cards.length - 1) {
+      //   card.style.marginBottom = `${itemDistance}px`;
+      // }
       card.style.willChange = "transform, filter";
       card.style.transformOrigin = "top center";
       card.style.backfaceVisibility = "hidden";

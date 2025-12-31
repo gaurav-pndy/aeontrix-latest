@@ -73,8 +73,8 @@ export default function WorkProtocol() {
         </div>
         {/* ScrollStack */}
         <ScrollStack
-          className="max-w-348 mx-auto"
-          itemDistance={200}
+          className=""
+          itemDistance={100}
           itemStackDistance={20}
           stackPosition="5%"
           baseScale={0.85}
@@ -83,7 +83,7 @@ export default function WorkProtocol() {
           {STEPS.map((step, index) => (
             <ScrollStackItem
               key={step.number}
-              itemClassName="bg-light border border-border/50 hover:border-green/80 shadow-[0_20px_60px_rgba(0,0,0,0.12)] hover:shadow-[0_35px_100px_rgba(10,142,110,0.2)] transition-all duration-300 group"
+              itemClassName="bg-light border border-border/50 hover:border-green/80 shadow-[0_20px_60px_rgba(0,0,0,0.12)] hover:shadow-[0_35px_100px_rgba(10,142,110,0.2)] transition-all duration-100 group"
             >
               <div className="flex items-start gap-6 h-full p-8 lg:p-10">
                 {/* Number badge */}
