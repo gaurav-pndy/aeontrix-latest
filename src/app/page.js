@@ -4,6 +4,7 @@ import ClientStories from "@/components/Home/ClientStories";
 import Hero from "@/components/Home/Hero";
 import HowAIEmployeesWork from "@/components/Home/HowAIEmployeesWork";
 import ServicesSection from "@/components/Home/ServicesSection";
+import WorkProtocol from "@/components/Home/WorkProtocol";
 import Ribbons from "@/components/ui/Ribbons";
 import { getRequestRegion } from "@/lib/region";
 import Image from "next/image";
@@ -21,6 +22,7 @@ export default async function Home() {
       <HowAIEmployeesWork />
       <BeforeAfterAeontrix />
       <ClientStories />
+      <WorkProtocol />
     </main>
   );
 }
