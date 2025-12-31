@@ -64,7 +64,7 @@ function FlipCard({ card, index, scrollProgress }) {
 
   return (
     <motion.div
-      className={`${card.custom} md:min-h-32 z-10 h-full`}
+      className={`${card.custom} md:min-h-32 lg:min-h-24 xl:min-h-32 z-10 h-full`}
       style={{ perspective: 1000 }}
     >
       <motion.div
@@ -200,7 +200,7 @@ export default function BeforeAfterAeontrix() {
               className="relative h-[85vh] md:h-auto rounded-3xl mt-4 md:mt-10 border-2 shadow-[0_10px_40px_rgba(0,0,0,0.35)] p-4 md:p-6"
             >
               {/* Cards grid */}
-              <div className="grid grid-cols-1 h-full md:grid-cols-4 gap-2 md:gap-8">
+              <div className="grid grid-cols-1 h-full md:grid-cols-4 gap-2 md:gap-8 lg:gap-4 xl:gap-8">
                 {cardData.slice(0, 4).map((card, i) => (
                   <FlipCard
                     key={i}
@@ -211,16 +211,16 @@ export default function BeforeAfterAeontrix() {
                 ))}
 
                 {/* Images - Before and After with crossfade */}
-                <div className="md:absolute translate-y-5 min-[400px]:translate-y-7 flex h-24 min-[400px]:h-32  md:h-96 w-full  justify-center z-0 md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+                <div className="md:absolute translate-y-5 min-[400px]:translate-y-7 flex h-24 min-[400px]:h-32  md:h-96 lg:h-60 xl:h-96 w-full  justify-center z-0 md:top-1/2 md:left-1/2 max-w-[calc(100vw-9rem)] mx-auto md:-translate-x-1/2 md:-translate-y-1/2 ">
                   <motion.div
                     style={{ opacity: beforeImageOpacity }}
-                    className="absolute inset-0 "
+                    className="absolute   inset-0 "
                   >
                     <Image
                       src="/before.png"
                       alt="Before Aeontrix"
                       fill
-                      className="relative! scale-150 -translate-y-3 md:scale-100 md:absolute object-contain"
+                      className="relative! scale-150 -translate-y-3 md:-translate-y-4 md:scale-100 md:absolute object-contain"
                     />
                   </motion.div>
                   <motion.div
@@ -249,7 +249,7 @@ export default function BeforeAfterAeontrix() {
           </div>
         </div>
       </div>
-      <div className="h-screen" />
+      <div className=" h-screen" />
     </section>
   );
 }

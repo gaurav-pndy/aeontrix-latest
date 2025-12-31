@@ -156,10 +156,10 @@ export default function ClientStories() {
           </Swiper>
 
           {/* Navigation arrows */}
-          <button className="client-stories-prev absolute left-1 md:-left-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-light-2 text-dark shadow-sm transition-all duration-300 cursor-pointer hover:bg-light active:scale-95">
+          <button className="client-stories-prev absolute left-1 lg:-left-3 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-light-2 text-dark shadow-sm transition-all duration-300 cursor-pointer hover:bg-light active:scale-95">
             <FiChevronLeft />
           </button>
-          <button className="client-stories-next absolute right-1 md:-right-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-light-2 text-dark shadow-sm transition-all duration-300 cursor-pointer hover:bg-light active:scale-95">
+          <button className="client-stories-next absolute right-1 lg:-right-3 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-light-2 text-dark shadow-sm transition-all duration-300 cursor-pointer hover:bg-light active:scale-95">
             <FiChevronRight />
           </button>
 
