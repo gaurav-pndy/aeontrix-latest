@@ -10,12 +10,22 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: scroll-position;
+    
+  /* Hide scrollbar - all browsers */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
 }
 
 .scroll-stack-inner {
-  padding: 20vh 5rem 50rem;
+  padding: 0rem 4rem 10rem;
   min-height: 100vh;
+
 }
+
+.scroll-stack-scroller::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+
 
 .scroll-stack-card-wrapper {
   position: relative;

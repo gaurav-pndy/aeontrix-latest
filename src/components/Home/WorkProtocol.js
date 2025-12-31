@@ -56,24 +56,29 @@ const STEPS = [
 
 export default function WorkProtocol() {
   return (
-    <section className="relative w-full py-8 bg-bg overflow-hidden">
-      <div className="mx-auto max-w-348 px-4 ">
+    <section className="relative w-full py-8 bg-bg ">
+      {" "}
+      {/* Key: 150vh+ */}
+      <div className="mx-auto max-w-348 px-4 h-[80vh]">
+        {" "}
+        {/* Full viewport height */}
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 sticky top-8 z-10">
+          {" "}
+          {/* Sticky header */}
           <h1>How our Work Protocol</h1>
           <p className="h3-text text-dark mt-4 mb-8">
             How We Work With Clients
           </p>
         </div>
-
         {/* ScrollStack */}
         <ScrollStack
           className="max-w-348 mx-auto"
-          itemDistance={100}
-          itemStackDistance={30}
-          stackPosition="20%"
+          itemDistance={200}
+          itemStackDistance={20}
+          stackPosition="5%"
           baseScale={0.85}
-          useWindowScroll={true}
+          useWindowScroll={false}
         >
           {STEPS.map((step, index) => (
             <ScrollStackItem
