@@ -43,11 +43,17 @@ const ScrollStack = ({
   }, []);
 
   const getScrollData = useCallback(() => {
-    if (useWindowScroll) {
+    if (useWindowScroll && lenisRef.current) {
       return {
-        scrollTop: window.scrollY,
+        scrollTop: lenisRef.current.scroll, // Lenis actual position
         containerHeight: window.innerHeight,
         scrollContainer: document.documentElement,
+      };
+    } else if (!useWindowScroll && scrollerRef.current?.lenisInstance) {
+      return {
+        scrollTop: scrollerRef.current.lenisInstance.scroll,
+        containerHeight: scrollerRef.current.clientHeight,
+        scrollContainer: scrollerRef.current,
       };
     } else {
       const scroller = scrollerRef.current;
@@ -196,13 +202,15 @@ const ScrollStack = ({
   const setupLenis = useCallback(() => {
     if (useWindowScroll) {
       const lenis = new Lenis({
-        duration: 1.2,
+        wrapper: scroller,
+        content: scroller.querySelector(".scroll-stack-inner"),
+        duration: 0.8,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
+        smoothWheel: false,
         touchMultiplier: 2,
         infinite: false,
         wheelMultiplier: 1,
-        lerp: 0.1,
+        lerp: 0.05,
         syncTouch: true,
         syncTouchLerp: 0.075,
       });
@@ -218,37 +226,10 @@ const ScrollStack = ({
       lenisRef.current = lenis;
       return lenis;
     } else {
+      // Native scroll for container - NO Lenis smoothing
       const scroller = scrollerRef.current;
-      if (!scroller) return;
-
-      const lenis = new Lenis({
-        wrapper: scroller,
-        content: scroller.querySelector(".scroll-stack-inner"),
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-        touchMultiplier: 2,
-        infinite: false,
-        gestureOrientationHandler: true,
-        normalizeWheel: true,
-        wheelMultiplier: 1,
-        touchInertiaMultiplier: 35,
-        lerp: 0.1,
-        syncTouch: true,
-        syncTouchLerp: 0.075,
-        touchInertia: 0.6,
-      });
-
-      lenis.on("scroll", handleScroll);
-
-      const raf = (time) => {
-        lenis.raf(time);
-        animationFrameRef.current = requestAnimationFrame(raf);
-      };
-      animationFrameRef.current = requestAnimationFrame(raf);
-
-      lenisRef.current = lenis;
-      return lenis;
+      scroller.addEventListener("scroll", handleScroll, { passive: true });
+      return () => scroller.removeEventListener("scroll", handleScroll);
     }
   }, [handleScroll, useWindowScroll]);
 
