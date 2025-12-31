@@ -64,7 +64,7 @@ function FlipCard({ card, index, scrollProgress }) {
 
   return (
     <motion.div
-      className={`${card.custom} md:min-h-32 lg:min-h-24 xl:min-h-32 z-10 h-full`}
+      className={`${card.custom} md:min-h-32 lg:min-h-24 xl:min-h-28 z-10 h-full`}
       style={{ perspective: 1000 }}
     >
       <motion.div
@@ -211,7 +211,7 @@ export default function BeforeAfterAeontrix() {
                 ))}
 
                 {/* Images - Before and After with crossfade */}
-                <div className="md:absolute translate-y-5 min-[400px]:translate-y-7 flex h-24 min-[400px]:h-32  md:h-96 lg:h-60 xl:h-96 w-full  justify-center z-0 md:top-1/2 md:left-1/2 max-w-[calc(100vw-9rem)] mx-auto md:-translate-x-1/2 md:-translate-y-1/2 ">
+                <div className="md:absolute translate-y-5 min-[400px]:translate-y-7 flex h-24 min-[400px]:h-32  md:h-96 lg:h-60 xl:h-90 w-full  justify-center z-0 md:top-1/2 md:left-1/2 max-w-[calc(100vw-9rem)] mx-auto md:-translate-x-1/2 md:-translate-y-1/2 ">
                   <motion.div
                     style={{ opacity: beforeImageOpacity }}
                     className="absolute   inset-0 "
