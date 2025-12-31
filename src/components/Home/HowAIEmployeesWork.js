@@ -39,7 +39,7 @@ const assistants = [
 
 export default function HowAIEmployeesWork() {
   return (
-    <section className="relative mx-auto max-w-348 px-4 py-12">
+    <section className="relative mx-auto max-w-348 px-4 py-8">
       <h1 className="h1-text text-center">How our AI Employees work</h1>
 
       <div className="relative mt-10 hidden lg:block">
@@ -140,10 +140,10 @@ export default function HowAIEmployeesWork() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="flex   items-center justify-center"
             >
-              <motion.div className="relative border-glow-wrapper w-full max-w-64 xl:max-w-86   rounded-2xl bg-transparent ">
+              <motion.div className="relative border-glow-wrapper w-full border-2 border-green max-w-64 xl:max-w-86 overflow-hidden  rounded-2xl bg-transparent ">
                 {" "}
                 <video
-                  src="/Brain_Rotation2.mp4"
+                  src="/Brain_Rotation3.mp4"
                   alt="AI Brain"
                   fill="true"
                   autoPlay

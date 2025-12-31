@@ -40,7 +40,7 @@ export default function ClientStories() {
   const slides = useMemo(() => CASE_STUDIES, []);
 
   return (
-    <section className="  py-12  bg-dark text-fg">
+    <section className="  py-8  bg-dark text-fg">
       {/* Header */}
       <div className="mx-auto max-w-348 px-4">
         <motion.div

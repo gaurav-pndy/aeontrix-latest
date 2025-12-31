@@ -21,7 +21,7 @@ export default function ClientLogoLoop() {
       className="relative 
                "
     >
-      <div className=" max-w-screen py-6 relative z-10">
+      <div className=" max-w-screen py-0 relative z-10">
         <p className="h4-text font-semibold mb-6 text-center ">
           Trusted by the best:
         </p>
